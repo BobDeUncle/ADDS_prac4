@@ -14,5 +14,6 @@ int main() {
   int iReverse = reverse.reverseDigit(i);
   string sReverse = reverse.reverseString(s);
   int totalTrucks = truckloads.numTrucks(numCrates, loadSize);
+  cout << numCrates << endl;
   cout << iReverse << " " << sReverse << " " << totalTrucks << endl;
 }
