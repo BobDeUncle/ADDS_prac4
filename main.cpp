@@ -10,9 +10,9 @@ int main() {
   int i, numCrates, loadSize;
   string s;
   Reverse reverse;
-  Truckloads truckloads;
+  // Truckloads truckloads;
+  EfficientTruckloads efficienttruckloads;
   cin >> i >> s >> numCrates >> loadSize; 
-  cout << numCrates << endl;
   int iReverse = reverse.reverseDigit(i);
   if (iReverse == -1) {
     cout << "ERROR ";
@@ -21,7 +21,7 @@ int main() {
   }
   string sReverse = reverse.reverseString(s);
   cout << sReverse << " ";
-  int totalTrucks = truckloads.numTrucks(numCrates, loadSize);
+  int totalTrucks = efficienttruckloads.numTrucks(numCrates, loadSize);
   if (totalTrucks == -1) {
     cout << "ERROR ERROR" << endl;
   } else {
