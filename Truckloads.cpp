@@ -2,7 +2,9 @@
 
 int Truckloads::numTrucks(int numCrates, int loadSize) {
   int totalTrucks = 0;
-  if (numCrates <= loadSize) {
+  if (numCrates <= 0 || loadSize <= 0) {
+    return -1;
+  } else if (numCrates <= loadSize) {
     return 1;
   } else {
     // Formula for rounding up ((numCrates + 2 - 1) / 2) is from Sparky on StackOverflow

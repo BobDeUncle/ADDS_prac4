@@ -10,8 +10,9 @@ int main() {
   int i, numCrates, loadSize;
   string s;
   Reverse reverse;
-  EfficientTruckloads truckloads;
+  Truckloads truckloads;
   cin >> i >> s >> numCrates >> loadSize; 
+  cout << numCrates << endl;
   int iReverse = reverse.reverseDigit(i);
   if (iReverse == -1) {
     cout << "ERROR ";
@@ -20,10 +21,10 @@ int main() {
   }
   string sReverse = reverse.reverseString(s);
   cout << sReverse << " ";
-  if (numCrates < 2 || numCrates > 10000 || loadSize < 1 || loadSize > (numCrates - 1)) {
+  int totalTrucks = truckloads.numTrucks(numCrates, loadSize);
+  if (totalTrucks == -1) {
     cout << "ERROR ERROR" << endl;
   } else {
-    int totalTrucks = truckloads.numTrucks(numCrates, loadSize);
     cout << totalTrucks << " " << totalTrucks << endl;
   }
 }
