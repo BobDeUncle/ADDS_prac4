@@ -11,7 +11,7 @@ int EfficientTruckloads::numTrucks(int numCrates, int loadSize) {
   string key1 = to_string(numCrates/2) + '-' + to_string(loadSize);
   string key2 = to_string((numCrates + 2 - 1) / 2) + '-' + to_string(loadSize);
 
-  if (numCrates <= 0 || loadSize <= 0) {
+  if (numCrates < 0 || loadSize < 0) {
     return -1;
   } else if (numCrates == 0 || loadSize == 0) {
     return 0;
