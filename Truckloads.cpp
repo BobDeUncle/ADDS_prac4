@@ -2,8 +2,10 @@
 
 int Truckloads::numTrucks(int numCrates, int loadSize) {
   int totalTrucks = 0;
-  if (numCrates <= 0 || loadSize <= 0) {
+  if (numCrates < 0 || loadSize < 0) {
     return -1;
+  } else if (numCrates == 0 || loadSize == 0) {
+    return 0;
   } else if (numCrates <= loadSize) {
     return 1;
   } else {
